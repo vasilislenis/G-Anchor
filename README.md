@@ -31,16 +31,13 @@ Inside G-Anchor's pipeline folder you can find:
  * **HCES_DB/:** The folder that includes the 
  databank. (The HCE should be in _fasta_ format in the form: most_conserved_chr*.fa, where * is the number of the chromosome).
  * **HCES_DB_coords/:** The folder that includes the HCE coordinates based on the reference genome (**REFERENCE/** folder). (The HCE files should be in the form: most_conserved_chr*.bed, where * is the number of the chromosome. This folder is mandatory in case that the user chooses to split the elements, see below).
-    
-G-Anchor uses a HCE databank in order to map the scaffold based genome on the chromosome based reference. You can use your own HCEs databank (see "Preparing your data" section) or you can use one of the prebuilt HCE databanks (see "Existing HCE databanks" section).
-In case that you want CONTINUE TOMORROW
 
 
 Inside G-Anchor's preprocessing pipeline folder you can find:
 * **GA_preProcessing_controler.sh:** The wrapper script to run the program.
 * **G-Anchor_preProcessing.sh:** G-Anchor's preprocessing main script.
 * **bin/:** The folder with the tools
-* **P_HCEs/:** The folder with the coordinates of the HCE as they are predicted based on the reference genome which was used initialy for the alignments construction. The preProcessing pipeline will tranform these coordinate to the reference of choice. (The HCE coordinates should be stored in _.bed_ format in the form: most_conserved_chr*.bed, where * is the number of the chromosome).
+* **P_HCEs/:** The folder with the coordinates of the HCE as they are predicted based on the reference genome which was used initialy for the alignments construction. The preProcessing pipeline will tranform these coordinate to the reference of choice. P_HCEs/ folder contains the HCE that are predicted from the UCSC multiple alignments of 99 genomes (see the list of the genomes in G-Anchor's paper) against human genome (hg38). The user can use them or replace them with the HCE of its choise, keeping consistency on the format (The HCE coordinates should be stored in _.bed_ format in the form: most_conserved_chr*.bed, where * is the number of the chromosome). 
 
 ### Preparing your data:
 #### Preparing your data for G-Anchor:
