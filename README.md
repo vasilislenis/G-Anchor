@@ -36,7 +36,9 @@ Inside G-Anchor's preprocessing pipeline folder you can find:
 * **GA_preProcessing_controler.sh:** The wrapper script to run the program.
 * **G-Anchor_preProcessing.sh:** G-Anchor's preprocessing main script.
 * **bin/:** The folder with the tools
-* **P_HCEs/:** The folder with the coordinates of the HCE databank as it is predicted based on the reference genome which was used initialy for the alignments construction. The preProcessing pipeline will tranform these coordinates to the reference of choice. By default, **P_HCEs/** folder contains the HCE databank coordinates that is predicted from the UCSC multiple alignments of 99 genomes (see the list of the genomes in G-Anchor's paper) against human genome (hg38). The user can use them or replace them with the HCE databank coordinates of its choise, keeping consistency on the format (The HCE coordinates should be stored in _.bed_ format in the form: most_conserved_chr*.bed, where * is the number of the chromosome). 
+* **P_HCEs/:** The folder with the coordinates of the HCE databank as it is predicted based on the reference genome which was used initialy for the alignments construction. The preProcessing pipeline will tranform these coordinates to the reference of choice.
+
+ By default, **P_HCEs/** folder contains the HCE databank coordinates that is predicted from the UCSC multiple alignments of 99 genomes (see the list of the genomes in G-Anchor's paper) against human genome (hg38). The user can use them or replace them with the HCE databank coordinates of its choise, keeping consistency on the format (The HCE coordinates should be stored in _.bed_ format in the form: most_conserved_chr*.bed, where * is the number of the chromosome). 
 
 ### Preparing your data:
 #### Preparing your data for G-Anchor:
