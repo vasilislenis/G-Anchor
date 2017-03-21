@@ -51,7 +51,7 @@ In case that you want to use the **split** parameter to split your HCE into smal
 
 
 
-####Preparing your data for the preprocessing pipeline:
+#### Preparing your data for the preprocessing pipeline:
 In case that you want to change the coordinates of the HCE databank into your chosen reference genome, you should:
  1. Put the HCE coordinates (_.bed_ format) into the **G-Anchor_preProcessing_V1.0/P_HCEs/:** (see the previous section for the form of the files).
  2. The genome sequences can be stored in **G-Anchor_V1.0/GENOMES_DB/** folder. The reference genome that the HCE where predicted should be stored in **G-Anchor_V1.0/GENOMES_DB/TARGET** in _fasta_ or _.2bit_ format in one file. The new reference genome should be stored at the same folder in _.2bed_ format in chromosomes form.
