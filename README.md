@@ -32,6 +32,9 @@ Inside G-Anchor's pipeline folder you can find:
  databank. (The HCE should be in _fasta_ format in the form: most_conserved_chr*.fa, where * is the number of the chromosome).
  * **HCES_DB_coords/:** The folder that includes the HCE coordinates based on the reference genome (**REFERENCE/** folder). (The HCE files should be in the form: most_conserved_chr*.bed, where * is the number of the chromosome. This folder is mandatory in case that the user chooses to split the elements, see below).
     
+G-Anchor uses a HCE databank in order to map the scaffold based genome on the chromosome based reference. You can use your own HCEs databank (see "Preparing your data" section) or you can use one of the prebuilt HCE databanks (see "Existing HCE databanks" section).
+In case that you want CONTINUE TOMORROW
+
 
 Inside G-Anchor's preprocessing pipeline folder you can find:
 * **GA_preProcessing_controler.sh:** The wrapper script to run the program.
@@ -52,9 +55,11 @@ In case that you want to use the **split** parameter to split your HCE into smal
 
 
 #### Preparing your data for the preprocessing pipeline:
+G-Anchor preprocessing pipeline cames with a prebuilt HCE coordinates set (P_HCEs folder) predicted on human (Hg38) genome. In case that you want to use your own , 
 In case that you want to change the coordinates of the HCE databank into your chosen reference genome, you should:
  1. Put the HCE coordinates (_.bed_ format) into the **G-Anchor_preProcessing_V1.0/P_HCEs/:** (see the previous section for the form of the files).
- 2. The genome sequences can be stored in **G-Anchor_V1.0/GENOMES_DB/** folder. The reference genome that the HCE where predicted should be stored in **G-Anchor_V1.0/GENOMES_DB/TARGET** in _fasta_ or _.2bit_ format in one file. The new reference genome should be stored at the same folder in _.2bed_ format in chromosomes form.
+ 2. The genome sequences can be stored in **G-Anchor_V1.0/GENOMES_DB/** folder. The reference genome that the HCE where predicted should be stored in **G-Anchor_V1.0/INPUT/GENOMES_DB/REFERENCE** in _fasta_ or _.2bit_ format in one file. The new reference genome should be stored at the same folder in _.2bed_ format in chromosomes form.
+
 
 
 ### How to run:
