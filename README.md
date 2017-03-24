@@ -115,7 +115,7 @@ You can run the preprocessing pipeline in two modes:
  
 To use the pipelines with the existing HCE databanks you can download the data that are provided in the following address:
 
-http://www.filehosting.org/file/details/638935/HCEs_DATABANKS_V1.0.tar.gz
+http://www.filehosting.org/file/details/651753/HCE_DATABANKS_V1.0.tar.gz
 
 In order to test G-Anchor on a genome wide example you can download the **INPUT/** sample folder that contains cattle (reference) and yak (target) genomes with a HCE databank predicted from 4 rumminant genomes (see the paper for details).
 
