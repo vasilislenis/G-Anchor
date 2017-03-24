@@ -43,10 +43,10 @@ Inside G-Anchor's preprocessing pipeline folder you can find:
 ### Preparing your data:
 #### Preparing your data for G-Anchor:
 
-G-Anchor needs 3 inputs that are described as follows:
- 1. Put your reference chromosomes in _.2bit_ format in the **G-Anchor_V1.0/GENOMES_DB/REFERENCE** folder.
- 2. Put your target scaffolds (one file) in  _.2bit_ format in the **G-Anchor_V1.0/GENOMES_DB/TARGET** folder.
- 3. Put your HCE databank in _fasta_ format in the **G-Anchor_V1.0/HCES_DB** folder.
+G-Anchor needs 3 inputs embeded the **INPUT/** folder that are described as follows:
+ 1. Put your reference chromosomes in _.2bit_ format in the **G-Anchor_V1.0/INPUT/GENOMES_DB/REFERENCE** folder.
+ 2. Put your target scaffolds (one file) in  _.2bit_ format in the **G-Anchor_V1.0/INPUT/GENOMES_DB/TARGET** folder.
+ 3. Put your HCE databank in _fasta_ format in the **G-Anchor_V1.0/INPUT/HCES_DB** folder.
 
 In case that you want to use the **split** parameter to split your HCE into smaller chunks, put their coordinates in _.bed_ format in the **G-Anchor_V1.0/HCES_DB_coords** folder. (The HCE files should be in the form: most_conserved_chr*.bed, where * is the number of the chromosome).
 
@@ -56,7 +56,7 @@ In case that you want to use the **split** parameter to split your HCE into smal
 G-Anchor preprocessing pipeline cames with a prebuilt HCE coordinates set (P_HCEs folder) predicted on human (Hg38) genome. In case that you want to use your own , 
 In case that you want to change the coordinates of the HCE databank into your chosen reference genome, you should:
  1. Put the HCE coordinates (_.bed_ format) into the **G-Anchor_preProcessing_V1.0/P_HCEs/:** (see the previous section for the form of the files).
- 2. The genome sequences can be stored in **G-Anchor_V1.0/GENOMES_DB/** folder. The reference genome that the HCE where predicted should be stored in **G-Anchor_V1.0/INPUT/GENOMES_DB/REFERENCE** in _fasta_ or _.2bit_ format in one file. The new reference genome should be stored at the same folder in _.2bed_ format in chromosomes form.
+ 2. The genome sequences can be stored in **G-Anchor_V1.0/INPUT/GENOMES_DB/** folder. The reference genome that the HCE where predicted should be stored in **G-Anchor_V1.0/INPUT/GENOMES_DB/REFERENCE** in _fasta_ or _.2bit_ format in one file. The new reference genome should be stored at the same folder in _.2bed_ format in chromosomes form.
 
 
 
@@ -117,7 +117,7 @@ To use the pipelines with the existing HCE databanks you can download the data t
 
 http://www.filehosting.org/file/details/638935/HCEs_DATABANKS_V1.0.tar.gz
 
-In order to test G-Anchor on a genome wide example you can download the **INPUT/** file that contains cattle (reference) and yak (target) genomes with a HCE databank predicted from 4 rumminant genomes (see the paper for details).
+In order to test G-Anchor on a genome wide example you can download the **INPUT/** sample folder that contains cattle (reference) and yak (target) genomes with a HCE databank predicted from 4 rumminant genomes (see the paper for details).
 
 http://www.filehosting.org/file/details/645866/INPUT.tar.gz
 
@@ -142,5 +142,5 @@ More details about the outputs or about G-Anchor in general, you can find in:
 
 ### Notes
 *  In order to run G-Anchor without any issues you should be careful to have your data in the appropriate format and to put them on the right subfolders in the INPUT folder (reference genome ---> INPUT/GENOMES_DB/REFERENCE/, target genome ---> INPUT/GENOMES_DB/TARGET/, HCE sequences (fasta) ---> INPUT/HCEs_DB/, HCE coordinates (bed) ---> INPUT/HCEs_coords/). To understand the structure, run the sample dataset first.
-* _**--fastMap**_ parameter can reduce significantly the ruuning time of the mapping phase but it can reduce the sensitivity, too. It also can work only with HCE that are smaller than 5kbp. G-Anchor splits by default the HCE that are larger than 5 kbp by default when fastMap option is enabled (For more information take a look at BLAT publication: "BLAT: The BLAST-like alignment tool, Kent WJ, 2002").
+* _**--fastMap**_ parameter can reduce significantly the ruuning time of the mapping phase but it can reduce the sensitivity, too. It also can work only with HCE that are smaller than 5kbp. G-Anchor splits the HCE that are larger than 5 kbp by default when fastMap option is enabled (For more information take a look at BLAT publication: "BLAT: The BLAST-like alignment tool, Kent WJ, 2002").
 * **_--fastMap_ parameter on the preprocessing stage:** Using fastMap flag on the preprocessing stage the HCE databank preparation will be faster but some HCE might be lost. As a result, G-Anchor could map less scaffolds in number. 
