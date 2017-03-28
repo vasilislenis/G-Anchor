@@ -45,10 +45,10 @@ G-Anchor needs 4 inputs embedded the **INPUT/** folder that are described as fol
 
 ##### File names:
 
-The reference chromosomes files should be in the form: chr*.2bit, where * is the number of chromosome.
- The target genome should be on the form name)of)species.2bit.
- The HCE databank files should be in the form: most_conserved_chr*.fa, where * is the number of the chromosome.
- The HCE coordinate files should be in the form: most_conserved_chr*.bed, where * is the number of the chromosome.
+The reference chromosomes files should be in the form: chr*.2bit, where * is the number of chromosome.<br />
+The target genome should be on the form name)of)species.2bit.<br />
+The HCE databank files should be in the form: most_conserved_chr*.fa, where * is the number of the chromosome.<br />
+The HCE coordinate files should be in the form: most_conserved_chr*.bed, where * is the number of the chromosome.
 
 More details about the file formats that G-Anchor uses can be found at:
 https://genome.ucsc.edu/FAQ/FAQformat
