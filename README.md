@@ -4,7 +4,7 @@ G-Anchor is a novel approach for large genomes comparison exploiting highly cons
 The pipeline maps a newly sequenced genome (assembled in scaffolds) on a reference genome in a fast way and without the need of a super computer. Instead of aligning the whole reference genome against the scaffolds of the target genome, it maps the Highly Conserved Elements (HCE) up to the target scaffolds and uses them as anchor points in order to put the scaffolds in the right order.
 
 ### Availability:
-G-Anchor pipeline is available for any Linux and macOSX distridution.
+G-Anchor pipeline is available for any Linux and macOSX distribution.
 Download the appropriate zipped file for your system and unzip it:
 ```
 tar -xvzf G-Anchor_LINUX_RELEASE_V1.0s.tar.gz
@@ -30,7 +30,7 @@ Inside G-Anchor's preprocessing pipeline folder you can find:
 * **GA_preProcessing_controler.sh:** The wrapper script to run the program.
 * **G-Anchor_preProcessing.sh:** G-Anchor's preprocessing main script.
 * **bin/:** The folder with the tools
-* **P_HCEs/:** The folder with the coordinates of the HCE databank as it is predicted based on the reference genome which was used initially for the alignments construction. The preProcessing pipeline will transform these coordinates to the reference of choice.
+* **P_HCEs/:** The folder with the coordinates of the HCE databank as it is predicted based on the reference genome which was used initially for the alignments construction. The preprocessing pipeline will transform these coordinates to the reference of choice.
 
  By default, **P_HCEs/** folder contains the HCE databank coordinates that is predicted from the UCSC multiple alignments of 99 genomes (see the list of the genomes in G-Anchor's paper) against human genome (hg38). The user can use them or replace them with the HCE databank coordinates of its choice, keeping consistency on the format (The HCE coordinates should be stored in _.bed_ format in the form: most_conserved_chr*.bed, where * is the number of the chromosome). 
 
@@ -79,11 +79,11 @@ You can run G-Anchor pipeline in two modes:
  ```
  ./G-Anchor_controller.sh -s 1 -e 29 -t yak 
  ```
-  The command example triggers the pipeline to run for all the cattle chromosomes with yak genome on a single core without any parameters anabled (slow run).
+  The command example triggers the pipeline to run for all the cattle chromosomes with yak genome on a single core without any parameters enabled (slow run).
   ```
  ./G-Anchor_controller.sh -s 1 -e 29 -t yak -p 8 --ooc --fastMap
   ```
-   The command example triggers the pipeline to run all the cattle chromosomes with yak genome, in a multicore mode with 8 threads and fastMap and ooc anabled (faster way, recommented).
+   The command example triggers the pipeline to run all the cattle chromosomes with yak genome, in a multicore mode with 8 threads and fastMap and ooc enabled (faster way, recommended).
 
 * With "-h/--help" argument you can see the help page with all the options that are provided.
  ```
@@ -107,7 +107,7 @@ You can run the preprocessing pipeline in two modes:
   ```
   ./GA_preProcessing_controler.sh -a 22 -b 29 -n BosTau7 -g /absolute_path_to_your_GENOME_DB/ --ooc
   ```
- The command example triggers the pipeline to run in order to calculate the HCE based on the new reference genome (BosTau7). It runs on a single core with the ooc parameter anabled (recomented). 
+ The command example triggers the pipeline to run in order to calculate the HCE based on the new reference genome (BosTau7). It runs on a single core with the ooc parameter enabled (recomended). 
  
 * With "-h/--help" argument you can see the help page with all the options that are provided.
   
@@ -121,7 +121,7 @@ To use the pipelines with the existing HCE databanks you can download the data t
 
 http://www.filehosting.org/file/details/652340/HCE_DATABANKS_V1.0.tar.gz
 
-In order to test G-Anchor on a genome wide example you can download the **INPUT/** sample folder that contains cattle (reference) and yak (target) genomes with the Universal HCE databank which is built by using the alignments of 99 species against human (see the paper for details). The reference genome was changed from human to cattle with the G-Anchor's preprocessing pipeline .
+In order to test G-Anchor on a genome wide example you can download the **INPUT/** sample folder that contains cattle (reference) and yak (target) genomes with the Universal HCE databank which is built by using the alignments of 99 species against human (see the paper for details). The reference genome was changed from human to cattle with the G-Anchor's preprocessing pipeline.
 
 http://www.filehosting.org/file/details/652631/INPUT.tar.gz
 
