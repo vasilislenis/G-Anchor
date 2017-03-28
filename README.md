@@ -24,13 +24,7 @@ Inside G-Anchor's pipeline folder you can find:
 * **G-Anchor_controller.sh:** The wrapper script to run the program.
 * **G-Anchor.sh:** G-Anchor's main script.
 * **bin/:** The folder with the tools
-* **INPUT/:** The folder that with all the data that G-Anchor needs as input.
- * **GENOMES_DB/:** The folder that includes the genome sequences.
-      * A subfolder named **REFERENCE/** should have the reference's chromosomes in _.2bit_ format in the form: chr*.2bit, where * is the number of the chromosome.
-      * A subfolder named **TARGET/** should have the target genome in _.2bit_ format, too.
- * **HCES_DB/:** The folder that includes the HCE databank. (The HCE should be in _fasta_ format in the form: most_conserved_chr*.fa, where * is the number of the chromosome).
- * **HCES_DB_coords/:** The folder that includes the HCE databank coordinates based on the reference genome (**REFERENCE/** folder). (The HCE coordinate files should be in the form: most_conserved_chr*.bed, where * is the number of the chromosome. This folder is mandatory in case that the user chooses to split the elements, see below).
-
+* **INPUT/:** The folder with all the data that G-Anchor needs as input.
 
 Inside G-Anchor's preprocessing pipeline folder you can find:
 * **GA_preProcessing_controler.sh:** The wrapper script to run the program.
@@ -43,13 +37,20 @@ Inside G-Anchor's preprocessing pipeline folder you can find:
 ### Preparing your data:
 #### Preparing your data for G-Anchor:
 
-G-Anchor needs 3 inputs embedded the **INPUT/** folder that are described as follows:
- 1. Put your reference chromosomes in _.2bit_ format in the **G-Anchor_V1.0/INPUT/GENOMES_DB/REFERENCE** folder.
- 2. Put your target scaffolds (one file) in  _.2bit_ format in the **G-Anchor_V1.0/INPUT/GENOMES_DB/TARGET** folder.
- 3. Put your HCE databank in _fasta_ format in the **G-Anchor_V1.0/INPUT/HCES_DB** folder.
+G-Anchor needs 4 inputs embedded the **INPUT/** folder that are described as follows:
+ 1. Reference chromosomes in _.2bit_ format in the **INPUT/GENOMES_DB/REFERENCE** folder.
+ 2. Target scaffolds (one file) in  _.2bit_ format in the **INPUT/GENOMES_DB/TARGET** folder.
+ 3. HCE databank in _fasta_ format in the **INPUT/HCES_DB** folder.
+ 4. The coordinates of the HCE on the reference genome in _.bed_format in the **INPUT/HCES_DB_coords** folder.
 
-In case that you want to use the **split** parameter to split your HCE into smaller chunks, put their coordinates in _.bed_ format in the **G-Anchor_V1.0/HCES_DB_coords** folder. (The HCE files should be in the form: most_conserved_chr*.bed, where * is the number of the chromosome).
+#####File names:
+The reference chromosomes files should be in the form: chr*.2bit, where * is the number of chromosome.
+The target genome should be on the form name)of)species.2bit.
+The HCE databank files should be in the form: most_conserved_chr*.fa, where * is the number of the chromosome.
+The HCE coordinate files should be in the form: most_conserved_chr*.bed, where * is the number of the chromosome.
 
+More details about the file formats that G-Anchor uses can be found at:
+https://genome.ucsc.edu/FAQ/FAQformat
 
 
 #### Preparing your data for the preprocessing pipeline:
