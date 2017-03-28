@@ -53,7 +53,6 @@ The HCE coordinate files should be in the form: most_conserved_chr*.bed, where *
 More details about the file formats that G-Anchor uses can be found at:
 https://genome.ucsc.edu/FAQ/FAQformat
 
-
 #### Preparing your data for the preprocessing pipeline:
 
 This is an optional step, required when the reference genome, against which the target is to be anchored, is changed.
