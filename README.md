@@ -77,13 +77,13 @@ You can run G-Anchor pipeline in two modes:
  
  Command examples:
  ```
- ./G-Anchor_controller.sh -s 1 -e 5 -t yak 
+ ./G-Anchor_controller.sh -s 1 -e 29 -t yak 
  ```
-  The command example triggers the pipeline to run for the chromosomes 1-5, with yak genome.
+  The command example triggers the pipeline to run for all the cattle chromosomes with yak genome on a single core without any parameters anabled (slow run).
   ```
- ./G-Anchor_controller.sh -s 1 -e 5 -t yak -p 8
+ ./G-Anchor_controller.sh -s 1 -e 29 -t yak -p 8 --ooc --fastMap
   ```
-   The command example triggers the pipeline to run for the chromosomes 1-5, with yak genome, in a multicore mode with 8 threads.
+   The command example triggers the pipeline to run all the cattle chromosomes with yak genome, in a multicore mode with 8 threads and fastMap and ooc anabled (faster way, recommented).
 
 * With "-h/--help" argument you can see the help page with all the options that are provided.
  ```
@@ -105,8 +105,9 @@ You can run the preprocessing pipeline in two modes:
  
  Command examples:
   ```
-  ./GA_preProcessing_controler.sh -a 22 -b 29 -n BosTau7 -g /absolute_path_to_your_GENOME_DB/ 
+  ./GA_preProcessing_controler.sh -a 22 -b 29 -n BosTau7 -g /absolute_path_to_your_GENOME_DB/ --ooc
   ```
+ The command example triggers the pipeline to run in order to calculate the HCE based on the new reference genome (BosTau7). It runs on a single core with the ooc parameter anabled (recomented). 
  
 * With "-h/--help" argument you can see the help page with all the options that are provided.
   
