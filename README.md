@@ -1,6 +1,6 @@
 # G-Anchor: A novel approach for cross-species comparison
 -----------------------------------------------------------
-G-Anchor is a novel approach for large genomes comparison exploiding highly conserved sequences as evolutionary-stable "anchors". 
+G-Anchor is a novel approach for large genomes comparison exploiting highly conserved sequences as evolutionary-stable "anchors". 
 The pipeline maps a newly sequenced genome (assembled in scaffolds) on a reference genome in a fast way and without the need of a super computer. Instead of aligning the whole reference genome against the scaffolds of the target genome, it maps the Highly Conserved Elements (HCE) up to the target scaffolds and uses them as anchor points in order to put the scaffolds in the right order.
 
 ### Availability:
@@ -10,7 +10,7 @@ Download the appropriate zipped file for your system and unzip it:
 tar -xvzf G-Anchor_LINUX_RELEASE_V1.0s.tar.gz
 ```
 ### Testing G-Anchor:
-In order to test G-Anchor, a small sample of data is embeded. The sample contains cattle's chromosome 28 as reference and 2 scaffolds of yak genome as target.
+In order to test G-Anchor, a small sample of data is embedded. The sample contains cattle's chromosome 28 as reference and 2 scaffolds of yak genome as target.
 Run the sample data with the following command:
   ```
   ./G-Anchor_controller.sh -s 28 -e 28 -t yak
@@ -36,14 +36,14 @@ Inside G-Anchor's preprocessing pipeline folder you can find:
 * **GA_preProcessing_controler.sh:** The wrapper script to run the program.
 * **G-Anchor_preProcessing.sh:** G-Anchor's preprocessing main script.
 * **bin/:** The folder with the tools
-* **P_HCEs/:** The folder with the coordinates of the HCE databank as it is predicted based on the reference genome which was used initialy for the alignments construction. The preProcessing pipeline will tranform these coordinates to the reference of choice.
+* **P_HCEs/:** The folder with the coordinates of the HCE databank as it is predicted based on the reference genome which was used initially for the alignments construction. The preProcessing pipeline will transform these coordinates to the reference of choice.
 
- By default, **P_HCEs/** folder contains the HCE databank coordinates that is predicted from the UCSC multiple alignments of 99 genomes (see the list of the genomes in G-Anchor's paper) against human genome (hg38). The user can use them or replace them with the HCE databank coordinates of its choise, keeping consistency on the format (The HCE coordinates should be stored in _.bed_ format in the form: most_conserved_chr*.bed, where * is the number of the chromosome). 
+ By default, **P_HCEs/** folder contains the HCE databank coordinates that is predicted from the UCSC multiple alignments of 99 genomes (see the list of the genomes in G-Anchor's paper) against human genome (hg38). The user can use them or replace them with the HCE databank coordinates of its choice, keeping consistency on the format (The HCE coordinates should be stored in _.bed_ format in the form: most_conserved_chr*.bed, where * is the number of the chromosome). 
 
 ### Preparing your data:
 #### Preparing your data for G-Anchor:
 
-G-Anchor needs 3 inputs embeded the **INPUT/** folder that are described as follows:
+G-Anchor needs 3 inputs embedded the **INPUT/** folder that are described as follows:
  1. Put your reference chromosomes in _.2bit_ format in the **G-Anchor_V1.0/INPUT/GENOMES_DB/REFERENCE** folder.
  2. Put your target scaffolds (one file) in  _.2bit_ format in the **G-Anchor_V1.0/INPUT/GENOMES_DB/TARGET** folder.
  3. Put your HCE databank in _fasta_ format in the **G-Anchor_V1.0/INPUT/HCES_DB** folder.
@@ -53,12 +53,11 @@ In case that you want to use the **split** parameter to split your HCE into smal
 
 
 #### Preparing your data for the preprocessing pipeline:
-G-Anchor preprocessing pipeline cames with a prebuilt HCE coordinates set (P_HCEs folder) predicted on human (Hg38) genome. In case that you want to use your own , 
-In case that you want to change the coordinates of the HCE databank into your chosen reference genome, you should:
- 1. Put the HCE coordinates (_.bed_ format) into the **G-Anchor_preProcessing_V1.0/P_HCEs/:** (see the previous section for the form of the files).
- 2. The genome sequences can be stored in **G-Anchor_V1.0/INPUT/GENOMES_DB/** folder. The reference genome that the HCE where predicted should be stored in **G-Anchor_V1.0/INPUT/GENOMES_DB/REFERENCE** in _fasta_ or _.2bit_ format in one file. The new reference genome should be stored at the same folder in _.2bed_ format in chromosomes form.
-
-
+G-Anchor preprocessing pipeline comes with a prebuilt HCE coordinates set (P_HCEs folder) predicted on human (Hg38) genome. 
+In case that you want to change the coordinates of the HCE databank into your chosen reference genome, you need:
+ 1. Human genome in one fasta file as hg38.fa or as hg38.2bit (can be found in **INPUT/GENOMES_DB/REFERENCE** folder, see "Existing HCE databanks and INPUT sample" section below). 
+ 2. The new reference sequences in chromosome form stored in **G-Anchor_V1.0/INPUT/GENOMES_DB/REFERENCE**, in _.2bit_ format.
+ 
 
 ### How to run:
 #### Running G-Anchor pipeline:
@@ -70,7 +69,7 @@ You can run G-Anchor pipeline in two modes:
  ```
  The terminal will ask you for the details that you have to give as inputs.
 
-* Giving the arguments that you want into the command line and the pipeline will run automatically.
+* Giving the arguments that you want into the command line and the pipeline will run automatically:
  
  Command examples:
  ```
@@ -98,7 +97,7 @@ You can run the preprocessing pipeline in two modes:
  ```
  The terminal will ask you for the details that you have to give as inputs.
 
-* Giving the arguments that you want into the command line and the pipeline will run automatically.
+* Giving the arguments that you want into the command line and the pipeline will run automatically:
  
  Command examples:
   ```
@@ -111,13 +110,13 @@ You can run the preprocessing pipeline in two modes:
  ./GA_preProcessing_controler.sh -h
  ```
 
-### Existing HCE databanks:
+### Existing HCE databanks and INPUT sample:
  
 To use the pipelines with the existing HCE databanks you can download the data that are provided in the following address:
 
 http://www.filehosting.org/file/details/652340/HCE_DATABANKS_V1.0.tar.gz
 
-In order to test G-Anchor on a genome wide example you can download the **INPUT/** sample folder that contains cattle (reference) and yak (target) genomes with a HCE databank predicted from 4 rumminant genomes (see the paper for details).
+In order to test G-Anchor on a genome wide example you can download the **INPUT/** sample folder that contains cattle (reference) and yak (target) genomes with a HCE databank predicted from 4 ruminant genomes (see the paper for details).
 
 http://www.filehosting.org/file/details/645866/INPUT.tar.gz
 
@@ -142,5 +141,5 @@ More details about the outputs or about G-Anchor in general, you can find in:
 
 ### Notes
 *  In order to run G-Anchor without any issues you should be careful to have your data in the appropriate format and to put them on the right subfolders in the INPUT folder (reference genome ---> INPUT/GENOMES_DB/REFERENCE/, target genome ---> INPUT/GENOMES_DB/TARGET/, HCE sequences (fasta) ---> INPUT/HCEs_DB/, HCE coordinates (bed) ---> INPUT/HCEs_coords/). To understand the structure, run the sample dataset first.
-* _**--fastMap**_ parameter can reduce significantly the ruuning time of the mapping phase but it can reduce the sensitivity, too. It also can work only with HCE that are smaller than 5kbp. G-Anchor splits the HCE that are larger than 5 kbp by default when fastMap option is enabled (For more information take a look at BLAT publication: "BLAT: The BLAST-like alignment tool, Kent WJ, 2002").
+* _**--fastMap**_ parameter can reduce significantly the running time of the mapping phase but it can reduce the sensitivity, too. It also can work only with HCE that are smaller than 5kbp. G-Anchor splits the HCE that are larger than 5 kbp by default when fastMap option is enabled (For more information take a look at BLAT publication: "BLAT: The BLAST-like alignment tool, Kent WJ, 2002").
 * **_--fastMap_ parameter on the preprocessing stage:** Using fastMap flag on the preprocessing stage the HCE databank preparation will be faster but some HCE might be lost. As a result, G-Anchor could map less scaffolds in number. 
