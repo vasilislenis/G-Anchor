@@ -46,8 +46,11 @@ G-Anchor needs 4 inputs embedded the **INPUT/** folder that are described as fol
 ##### File names:
 
 The reference chromosomes files should be in the form: chr*.2bit, where * is the number of chromosome.
+
 The target genome should be on the form name)of)species.2bit.
+
 The HCE databank files should be in the form: most_conserved_chr*.fa, where * is the number of the chromosome.
+
 The HCE coordinate files should be in the form: most_conserved_chr*.bed, where * is the number of the chromosome.
 
 More details about the file formats that G-Anchor uses can be found at:
@@ -55,10 +58,13 @@ https://genome.ucsc.edu/FAQ/FAQformat
 
 
 #### Preparing your data for the preprocessing pipeline:
+
+This is an optional step, required when the reference genome, against which the target is to be anchored, is changed.
+
 G-Anchor preprocessing pipeline comes with a prebuilt HCE coordinates set (P_HCEs folder) predicted on human (Hg38) genome. 
 In case that you want to change the coordinates of the HCE databank into your chosen reference genome, you need:
- 1. Human genome in one fasta file as hg38.fa or as hg38.2bit (can be found in **INPUT/GENOMES_DB/REFERENCE** folder, see "Existing HCE databanks and INPUT sample" section below). 
- 2. The new reference sequences in chromosome form stored in **G-Anchor_V1.0/INPUT/GENOMES_DB/REFERENCE**, in _.2bit_ format.
+ 1. Human genome in one fasta file as hg38.fa or as hg38.2bit (can be found in **G-Anchor_V1.0s/INPUT/GENOMES_DB/REFERENCE** folder, see "Existing HCE databanks and INPUT sample" section below). 
+ 2. The new reference sequences in chromosome form stored in **G-Anchor_V1.0s/INPUT/GENOMES_DB/REFERENCE**, in _.2bit_ format.
  
 
 ### How to run:
