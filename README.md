@@ -66,6 +66,10 @@ In case that you want to change the coordinates of the HCE databank into your ch
 ### How to run:
 #### Running G-Anchor pipeline:
 
+##### G-Anchor's help page:
+ ```
+ ./G-Anchor_controller.sh -h/--help
+ ```
 You can run G-Anchor pipeline in two modes:
 * Using the interactive mode: Run the controller with "-r" option:
  ```
@@ -85,14 +89,13 @@ You can run G-Anchor pipeline in two modes:
   ```
    The command example triggers the pipeline to run all the cattle chromosomes with yak genome, in a multicore mode with 8 threads and fastMap and ooc enabled (faster way, recommended).
 
-* With "-h/--help" argument you can see the help page with all the options that are provided.
- ```
- ./G-Anchor_controller.sh -h
- ```
- 
 
 #### Running preprocessing pipeline:
 
+##### G-Anchor's preprocessing pipeline help page:
+ ```
+ ./GA_preProcessing_controler.sh -h/--help
+ ```
 You can run the preprocessing pipeline in two modes:
  
  * Using the interactive mode: Run the controller with "-r" option:
@@ -109,11 +112,6 @@ You can run the preprocessing pipeline in two modes:
   ```
  The command example triggers the pipeline to run in order to calculate the HCE based on the new reference genome (BosTau7). It runs on a single core with the ooc parameter enabled (recomended). 
  
-* With "-h/--help" argument you can see the help page with all the options that are provided.
-  
- ```
- ./GA_preProcessing_controler.sh -h
- ```
 
 ### Existing HCE databanks and INPUT sample:
  
