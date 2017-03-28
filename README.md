@@ -48,7 +48,7 @@ G-Anchor needs 4 inputs embedded the **INPUT/** folder that are described as fol
 The reference chromosomes files should be in the form: **chr*.2bit**, where * is the number of chromosome.<br />
 The target genome should be on the form **name_of_species.2bit**.<br />
 The HCE databank files should be in the form: **most_conserved_chr*.fa**, where * is the number of the chromosome.<br />
-The HCE coordinate files should be in the form: **most_conserved_chr*.bed**, where ** * ** is the number of the chromosome.
+The HCE coordinate files should be in the form: **most_conserved_chr*.bed**, where * is the number of the chromosome.
 
 More details about the file formats that G-Anchor uses can be found at:
 https://genome.ucsc.edu/FAQ/FAQformat
@@ -135,6 +135,8 @@ G-Anchor produces 4 different outputs that are in the **OUTPUT_target/** folder 
      * **psl_final_target:/** The alignments in _.psl_ format
      * **chromosomes_blueprint.txt:** A list with the number of HCE anchors on each target scaffold ("v" indicator shows that there are more than one elements that a mapped scaffold partially in a different chromosome with more than one HCE. "p" indicator shows that the partially mapped scaffold is supported only by one HCE).
 * **logFile_target:** A log file that you can truck if an error was occured in a pipeline's step.
+
+In order to visualise the mapping result, chains & nets as the psl outputs can be uploaded as custom tracks on UCSC genome browser as is described in: https://genome.ucsc.edu/goldenpath/help/customTrack.html
 
 #### G-Anchors preprocessing outputs:
 * **FINAL_coords/:** The coordinates of the HCE in _.bed_ format, based on the new reference genome.
