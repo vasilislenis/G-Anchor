@@ -136,7 +136,7 @@ G-Anchor produces 4 different outputs that are in the **OUTPUT_target/** folder 
      * **chromosomes_blueprint.txt:** A list with the number of HCE anchors on each target scaffold ("v" indicator shows that there are more than one elements that a mapped scaffold partially in a different chromosome with more than one HCE. "p" indicator shows that the partially mapped scaffold is supported only by one HCE).
 * **logFile_target:** A log file that you can truck if an error was occured in a pipeline's step.
 
-In order to visualise the mapping result, chains & nets as the psl outputs can be uploaded as custom tracks on UCSC genome browser as is described in: https://genome.ucsc.edu/goldenpath/help/customTrack.html
+In order to visualise the mapping result, chains & nets and the psl output can be uploaded as custom tracks on UCSC genome browser as is described in: https://genome.ucsc.edu/goldenpath/help/customTrack.html
 
 #### G-Anchors preprocessing outputs:
 * **FINAL_coords/:** The coordinates of the HCE in _.bed_ format, based on the new reference genome.
