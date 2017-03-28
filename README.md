@@ -43,7 +43,8 @@ G-Anchor needs 4 inputs embedded the **INPUT/** folder that are described as fol
  3. HCE databank in _fasta_ format in the **INPUT/HCES_DB** folder.
  4. The coordinates of the HCE on the reference genome in _.bed_format in the **INPUT/HCES_DB_coords** folder.
 
-#####File names:
+##### File names:
+
 The reference chromosomes files should be in the form: chr*.2bit, where * is the number of chromosome.
 The target genome should be on the form name)of)species.2bit.
 The HCE databank files should be in the form: most_conserved_chr*.fa, where * is the number of the chromosome.
