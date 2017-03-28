@@ -116,7 +116,7 @@ To use the pipelines with the existing HCE databanks you can download the data t
 
 http://www.filehosting.org/file/details/652340/HCE_DATABANKS_V1.0.tar.gz
 
-In order to test G-Anchor on a genome wide example you can download the **INPUT/** sample folder that contains cattle (reference) and yak (target) genomes with a HCE databank predicted from 4 ruminant genomes (see the paper for details).
+In order to test G-Anchor on a genome wide example you can download the **INPUT/** sample folder that contains cattle (reference) and yak (target) genomes with the Universal HCE databank which is built by using the alignments of 99 species against human (see the paper for details). The reference genome was changed from human to cattle with the G-Anchor's preprocessing pipeline .
 
 http://www.filehosting.org/file/details/645866/INPUT.tar.gz
 
