@@ -56,8 +56,8 @@ https://genome.ucsc.edu/FAQ/FAQformat
 ##### Headers format:
 G-Anchor works with specific headers format. Here you can find an example of the appropriate type of headers. 
 * **ga-reference:** >chr1
-* **gat-target:** >yak_genome
-* **most_conserved_chr*.fa:** >chr1.1.3.108759.108805 (the HCE header includes 5 fields: a)name of chromosome that belongs, b & c) count number of HCE as phastCons predicted it, d & e) start and end coordinate refering to chromosome).
+* **ga-target:** >yak_genome
+* **HCE:** >chr1.1.3.108759.108805 (the HCE header includes 5 fields: a)name of chromosome that belongs, b & c) count number of HCE as phastCons predicted it, d & e) start and end coordinate refering to chromosome).
 
 #### Preparing your data for the preprocessing pipeline:
 
