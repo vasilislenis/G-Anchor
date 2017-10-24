@@ -367,7 +367,7 @@ fi
 for i in $(seq $CHR1 $CHR2)
                 do
 		echo "Mapping the ga-reference chromosome $i:"
-             time  ./G-Anchor.sh chr$i $IN/HCE_DB/most_conserved_chr$i.fa $IN/GENOMES_DB/REFERENCE/chr$i.2bit $IN/GENOMES_DB/TARGET/$GENOME.2bit $PARAL $CORES $OOC1 $FASTMAP $SPLIT $STEP1 $THRESS1 $BLAT_MI $PSLRES_MA >>logFile_$GENOME 2>&1
+                ./G-Anchor.sh chr$i $IN/HCE_DB/most_conserved_chr$i.fa $IN/GENOMES_DB/REFERENCE/chr$i.2bit $IN/GENOMES_DB/TARGET/$GENOME.2bit $PARAL $CORES $OOC1 $FASTMAP $SPLIT $STEP1 $THRESS1 $BLAT_MI $PSLRES_MA >>logFile_$GENOME 2>&1
  echo "chromosome $i is finished!"
                 sleep 10
                 done
