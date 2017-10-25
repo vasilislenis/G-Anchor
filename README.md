@@ -55,7 +55,7 @@ https://genome.ucsc.edu/FAQ/FAQformat
 
 ##### Headers format:
 G-Anchor works with specific headers format. Here you can find an example of the appropriate type of headers. 
-* **ga-reference:** >chr1
+* **ga-reference chromosomes:** >chr1
 * **HCE:** >chr1.1.3.108759.108805 (the HCE header includes 5 fields, separated by dots: a)name of chromosome that belongs, b & c) count number of HCE as phastCons predicted it, d & e) start and end coordinate refering to ga-reference chromosome).
 
 #### Preparing your data for the preprocessing pipeline:
